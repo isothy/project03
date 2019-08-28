@@ -1,0 +1,81 @@
+/* 1.BASIC RULES */
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Livvic', sans-serif;
+    background-color: bisque;
+}
+
+/* 2.GRID LAYOUT */
+/*
+Sets a grid layout with grid-template-row: .5fr .5fr 4fr .5fr .5fr (total=6fr) and 4 columns. In this layout "Header=6fr, Nav=6fr Carousel=5fr Main Text=4fr". Footer positions out of the grid layout with 100% width.
+*/
+
+.container {
+    display: grid;
+    grid-template-areas: "header header header header header"
+                         "nav nav nav nav nav"
+                         ". carousel carousel carousel ."
+                         ". . main . .";
+    grid-template-columns: .5fr .5fr 4fr .5fr .5fr;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 1.5em;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+.carousel {
+    grid-area: carousel;
+}
+
+.main {
+    grid-area: main;
+}
+
+/* 3.HEADER */
+/* 
+Header
+
+Places a centered logo and name as a page heading.
+
+Markup:
+<header>
+    <img src="images/logo.svg" alt="logo" style="text-align: center;">
+    <h1>Atölye Pembe Kedi</h1>
+</header>
+
+Styleguide Header
+*/
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header > img {
+    display: block;
+    size: 10vw;
+}
+
+header > h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: .5em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}

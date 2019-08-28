@@ -1,0 +1,25 @@
+{
+  "name": "project03_mobilefirst",
+  "version": "1.0.0",
+  "description": "first mobile-first project of apk",
+  "main": "index.js",
+  "scripts": {
+    "build:kss": "kss --config kss-config.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isothy/project03.git"
+  },
+  "author": "isothy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isothy/project03/issues"
+  },
+  "homepage": "https://github.com/isothy/project03#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "kss": "^3.0.0-beta.25",
+    "michelangelo": "^0.8.0"
+  }
+}
